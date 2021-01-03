@@ -15,6 +15,7 @@ body {
   background-color: #222;
   color: #eee;
   font-family: "Press Start 2P", sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -116,13 +117,13 @@ main {
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 700px), screen and (max-height: 700px) {
   html {
     font-size: 55%;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), screen and (max-height: 600px) {
   html {
     font-size: 50%;
   }
@@ -144,5 +145,23 @@ main {
   }
   .message {
     margin-bottom: 5rem;
+  }
+}
+
+@media screen and (max-height: 500px), screen and (max-width: 500px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (max-height: 350px), screen and (max-width: 350px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+@media screen and (max-height: 250px), screen and (max-width: 250px) {
+  html {
+    font-size: 20%;
   }
 }
