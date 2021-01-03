@@ -28,7 +28,7 @@ document.querySelector('.check').addEventListener('click', function () {
         document.querySelector('.number').style.width = '30rem';
         displayMessage('✔️ Correct guess');        
         document.querySelector('body').style.backgroundColor = '#60b347';
-        document.querySelector('.check').style.disabled = 'true';
+        document.querySelector('.check').disabled = true;
         if (highScore < score) {
             document.querySelector('.highscore').textContent = `🥇 Highscore: ${score}`;
             localStorage.setItem('highScore', score);
@@ -45,6 +45,7 @@ document.querySelector('.check').addEventListener('click', function () {
         else {
             displayMessage('👎 You lost the game!');
             document.querySelector('.score').textContent = `💯 Score: 0`;
+            document.querySelector('.check').disabled = true;
         }
     }
 });
@@ -56,7 +57,7 @@ document.querySelector('.again').addEventListener('click', function() {
     document.querySelector('.number').style.width = '15rem';
     document.querySelector('.score').textContent = `💯 Score: 20`;
     document.querySelector('body').style.backgroundColor = '#222';
-    document.querySelector('.check').style.disabled = 'false';
+    document.querySelector('.check').disabled = false;
     document.querySelector('.guess').value = '';
     secretNumber = Math.trunc((Math.random() * 20)) + 1;
     score = 20;    
