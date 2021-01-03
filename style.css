@@ -37,6 +37,7 @@ h1 {
   position: absolute;
   top: 5%;
   right: 1%;
+  font-size: 1.6rem;
 }
 
 .btn {
@@ -68,6 +69,8 @@ h1 {
   padding: 4rem;
   bottom: 0;
   left: 50%;
+  width: 15rem;
+  text-align: center;
   transform: translate(-50%, 50%);
 }
 
@@ -111,4 +114,35 @@ main {
 
 .score {
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+  main {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .left {
+    margin-bottom: 5rem;
+  }
+  .right {
+    text-align: center;
+  }
+  .message {
+    margin-bottom: 5rem;
+  }
 }
