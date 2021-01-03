@@ -3,7 +3,6 @@
 
 // variable intialisation.
 let secretNumber = Math.trunc((Math.random() * 20)) + 1;
-console.log(secretNumber);
 let score = 20;
 let highScore = 0;
 const localhighScore = localStorage.getItem('highScore');
@@ -60,6 +59,5 @@ document.querySelector('.again').addEventListener('click', function() {
     document.querySelector('.check').style.disabled = 'false';
     document.querySelector('.guess').value = '';
     secretNumber = Math.trunc((Math.random() * 20)) + 1;
-    score = 20;
-    console.log(secretNumber);
+    score = 20;    
 });
